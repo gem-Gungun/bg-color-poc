@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the build output to the Nginx html directory
-COPY ./build /usr/share/nginx/html 
+COPY ./dist /usr/share/nginx/html 
 
 
 EXPOSE 80
