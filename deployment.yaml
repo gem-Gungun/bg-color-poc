@@ -15,7 +15,7 @@ spec:
       containers:
       - name: bgcolor
         image: localhost:8082/repository/bg-color:latest 
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         ports:
-          - containerPort: 80
+          - containerPort: 5173
         
