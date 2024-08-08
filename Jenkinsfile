@@ -21,6 +21,15 @@ node {
         }
     }
 
+    stage('Build React Application') {
+        try {
+            bat "npm install"
+            bat "npm run build"
+        } catch (Exception e) {
+            error "Failed to build React application: ${e}"
+        }
+    }
+
     stage('Build Docker Image') {
         try {
             // Build the Docker image using Windows-compatible command
@@ -48,7 +57,7 @@ node {
             // bat "kubectl version"
             bat "kubectl apply -f deployment.yaml"
             bat "kubectl apply -f service.yaml"
-            bat "kubectl port-forward svc/bgcolor-service 5173:5173"
+            
 
             // bat "kubectl get pods"
         }
