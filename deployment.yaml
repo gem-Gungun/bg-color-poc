@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bgcolor-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bgcolor
+  template:
+    metadata:
+      labels:
+        app: bgcolor
+    spec:
+      containers:
+      - name: bgcolor
+        image: localhost:8082/repository/bg-color:latest 
+        imagePullPolicy: Never
+        ports:
+          - containerPort: 5173
+        
