@@ -24,7 +24,7 @@ node {
     stage('Build React Application') {
         try {
             bat "npm install"
-            bat "npm run build"
+            bat "npm run dev"
         } catch (Exception e) {
             error "Failed to build React application: ${e}"
         }
