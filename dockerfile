@@ -5,7 +5,7 @@ FROM nginx:alpine
 COPY ./dist /usr/share/nginx/html 
 
 
-EXPOSE 80
+EXPOSE 5173
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
