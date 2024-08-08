@@ -4,8 +4,8 @@ FROM nginx:alpine
 # Copy the build output to the Nginx html directory
 COPY ./dist /usr/share/nginx/html 
 
-
-EXPOSE 5173
+# Expose the default Nginx port
+EXPOSE 80
 
 # Start Nginx server
 CMD ["nginx", "-g", "daemon off;"]
