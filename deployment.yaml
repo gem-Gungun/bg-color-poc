@@ -17,5 +17,5 @@ spec:
         image: localhost:8082/repository/bg-color:latest 
         imagePullPolicy: Never
         ports:
-          - containerPort: 5173
+          - containerPort: 80
         
