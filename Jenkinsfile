@@ -1,5 +1,5 @@
 node {
-    def gitUrl = 'https://github.com/gem-Gungun/bgcolor.git'
+    def gitUrl = 'https://github.com/gem-Gungun/bg-color-poc.git'
     def branch = 'main'
     def credentialsId = 'ca4e208b-871a-4f05-a4c6-5e6b046dad30'
     def nexusUrl = 'localhost:8082/repository/bg-color/'
