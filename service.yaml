@@ -7,6 +7,6 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 5173
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: bgcolor
