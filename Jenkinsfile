@@ -20,6 +20,14 @@ node {
             error "Failed to clone repository: ${e}"
         }
     }
+    stage('SonarQube Analysis') {
+    dir ('bg-color') {
+      def scannerHome = tool 'SonarScanner';
+      withSonarQubeEnv() {
+        sh "${scannerHome}/bin/sonar-scanner"
+      }
+    }
+  }
 
     stage('Build React Application') {
         try {
